@@ -1,0 +1,53 @@
+{
+  "name": "libp2p-introspection",
+  "version": "0.0.0",
+  "description": "Introspection for js-libp2p",
+  "leadMaintainer": "Vasco Santos <santos.vasco10@gmail.com>",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "aegir lint",
+    "test": "aegir test -t node",
+    "test:node": "aegir test -t node",
+    "build": "aegir build",
+    "docs": "aegir-docs",
+    "release": "aegir release --target node --docs",
+    "release-minor": "aegir release --type minor --docs",
+    "release-major": "aegir release --type major --docs",
+    "coverage": "aegir coverage",
+    "coverage-publish": "aegir coverage --provider coveralls"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "pre-push": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libp2p/js-libp2p-introspection.git"
+  },
+  "keywords": [
+    "libp2p",
+    "js",
+    "introspection"
+  ],
+  "bugs": {
+    "url": "https://github.com/libp2p/js-libp2p-introspection/issues"
+  },
+  "homepage": "https://github.com/libp2p/js-libp2p-introspection#readme",
+  "devDependencies": {
+    "aegir": "^18.0.3",
+    "libp2p": "~0.24.4",
+    "peer-id": "~0.12.2",
+    "peer-info": "~0.15.1"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "bignumber.js": "^8.1.1",
+    "debug": "^4.1.1",
+    "err-code": "^1.1.2",
+    "protons": "^1.0.1"
+  },
+  "license": "MIT"
+}
